@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {Hero} from "../../interfaces/heroes.interface";
 
 @Component({
   selector: 'app-heroe',
@@ -8,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class HeroeComponent implements OnInit {
 
-
+  hero!:Hero;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -17,5 +18,7 @@ export class HeroeComponent implements OnInit {
       ({id}) => console.log(id)
     );
   }
+
+
 
 }
